@@ -15,20 +15,38 @@ function App() {
     // score = score + 1;
     // score++;
     // score += 1;
-    setScore(score + 1);
+    // setScore(score + 1);
+    // setScore(_score);
+    const _score = score + 1; // Otherweise, it adds 1 more, that's why we add _score temp variable!
+    setScore(_score);
+
+    // First Solution
+    // score > 5 ? setCount(0) : '';
+
+    // Second Solution
+    // const _count = 0;
+    // const _count = count - count;
+    // score > 5 ? setCount(0) : '';
+    _score > 5 ? setCount(0) : '';
   };
 
   return (
     <div className="App">
       <h1>useState-eventHandler</h1>
       <hr />
+
       {count > 0 && score > 0 && (
         <p className="greater"> Both variables are greater than 0! </p>
       )}
+
+      {/* {score > 5 && setCount(0)} */}
+
       <button onClick={handleStateVariable}>
         {`State Variable Button => ${count}`}
       </button>
+
       <hr />
+
       <button onClick={handleNormalVariable}>
         {`Normal Variable Button => ${score}`}
       </button>
