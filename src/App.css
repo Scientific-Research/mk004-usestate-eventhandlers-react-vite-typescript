@@ -14,4 +14,18 @@ body {
   h1 {
     color: yellow;
   }
+
+  button {
+    padding: 1rem;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+
+  .greater {
+    color: rgb(174, 217, 111);
+  }
 }

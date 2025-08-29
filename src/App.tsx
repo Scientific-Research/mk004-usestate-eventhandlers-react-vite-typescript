@@ -21,12 +21,16 @@ function App() {
   return (
     <div className="App">
       <h1>useState-eventHandler</h1>
+      <hr />
+      {count > 0 && score > 0 && (
+        <p className="greater"> Both variables are greater than 0! </p>
+      )}
       <button onClick={handleStateVariable}>
-        State Variable Button {count}
+        {`State Variable Button => ${count}`}
       </button>
-
+      <hr />
       <button onClick={handleNormalVariable}>
-        Normal Variable Button {score}
+        {`Normal Variable Button => ${score}`}
       </button>
     </div>
   );
