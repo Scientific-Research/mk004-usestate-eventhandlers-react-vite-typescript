@@ -37,6 +37,17 @@ function App() {
     _score > 5 ? setCount(0) : '';
   };
 
+  const handleChangeColor = () => {
+    console.log('The color has changed!');
+    // const color1 = _colors[0];
+
+    // First Solution: using push to add the red color:
+    // colors.push('red');
+
+    // Second Solution using useState() and spread operator to add the new color('red') to the current array!
+    setColors([...colors, 'red']);
+  };
+
   return (
     <div className="App">
       <h1>useState-eventHandler</h1>
@@ -61,10 +72,13 @@ function App() {
       <hr />
 
       <ul>
-        {colors.map((c, idx) => (
-          <li key={idx}>{c}</li>
+        {colors.map((c, index) => (
+          // <li key={idx}>{c}</li>
+          <div key={index}>{c}</div>
         ))}
       </ul>
+
+      <button onClick={handleChangeColor}>add red</button>
     </div>
   );
 }
