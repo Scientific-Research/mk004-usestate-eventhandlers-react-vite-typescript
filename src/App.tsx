@@ -3,11 +3,13 @@ import { useState } from 'react';
 // let score = 0; Normal variable => we will change it from a normal variable to a state variable below!
 
 const _colors = ['green', 'blue', 'yellow', 'purple'];
+const _title = '';
 
 function App() {
   const [count, setCount] = useState(0); // State variable
   const [score, setScore] = useState(0); // change the Normal variable to a state variable!
   const [colors, setColors] = useState(_colors);
+  const [title, setTitle] = useState(_title);
 
   // string, boolean, number => stack
   // arrays, objects => heap
