@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // let score = 0; Normal variable => we will change it from a normal variable to a state variable below!
 
-const _colors = ['green', 'blue', 'yellow'];
+const _colors = ['green', 'blue', 'yellow', 'purple'];
 
 function App() {
   const [count, setCount] = useState(0); // State variable
@@ -57,6 +57,14 @@ function App() {
       <button onClick={handleNormalVariable}>
         {`Normal Variable Button => ${score}`}
       </button>
+
+      <hr />
+
+      <ul>
+        {colors.map((c, idx) => (
+          <li key={idx}>{c}</li>
+        ))}
+      </ul>
     </div>
   );
 }
