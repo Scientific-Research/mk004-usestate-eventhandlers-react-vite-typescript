@@ -60,7 +60,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={score > 5 ? { backgroundColor: 'red' } : {}}>
       <h1>useState-eventHandler</h1>
       <hr />
 
