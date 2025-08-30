@@ -50,8 +50,13 @@ function App() {
     // setColors([...colors, 'red']);
 
     // Third Solution using push
-    colors.push('red');
-    setColors([...colors]);
+    // colors.push('red');
+    // setColors([...colors]); // because Array stores in Heap memory, that's why we have to make a copy of that and then we setColors() on this copy. We can not apply the setColors() directly on the colors state variable, because they are immutable(unchangeable). First of all, we have to make a copy of that using spread operator and then apply the changes on this copy using setColors()!
+
+    // Fourth Solution => ET Solution
+    const _colors = [...colors];
+    _colors.push('red');
+    setColors(_colors);
   };
 
   return (
