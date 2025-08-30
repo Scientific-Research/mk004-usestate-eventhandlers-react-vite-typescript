@@ -39,13 +39,19 @@ function App() {
 
   const handleChangeColor = () => {
     console.log('The color has changed!');
-    // const color1 = _colors[0];
 
-    // First Solution: using push to add the red color:
-    // colors.push('red');
+    // setColors(['red']); // set and display only red color and not other colors
 
-    // Second Solution using useState() and spread operator to add the new color('red') to the current array!
-    setColors([...colors, 'red']);
+    // First Solution using a tempo variable
+    // const _colorss: string[] = [...colors, 'red'];
+    // setColors(_colorss);
+
+    // Second Solution using useState() and spread operator(to concatenate) to add the new color('red') to the current array!
+    // setColors([...colors, 'red']);
+
+    // Third Solution using push
+    colors.push('red');
+    setColors([...colors]);
   };
 
   return (
